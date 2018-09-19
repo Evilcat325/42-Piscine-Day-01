@@ -1,4 +1,4 @@
-ls -la | grep -E '^-|^d' | wc -l | awk '{print $1-1}'
+find . -type d -o -type f | wc -l | tr -d ' '
 # ls -la show all file/directories/link/xxxxx
 # -E pattern or
 # ^- match regular file
