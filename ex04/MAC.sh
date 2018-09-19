@@ -1,1 +1,1 @@
-ifconfig -a | grep -E '[[:xdigit:]]{2}(:[[:xdigit:]]{2}){5}' | awk '{print $2}'
+ifconfig -a | grep -oE '[[:xdigit:]]{2}(:[[:xdigit:]]{2}){5}' | cat
